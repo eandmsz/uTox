@@ -146,6 +146,8 @@ void parse_args(int argc, char *argv[],
                     settings.theme = THEME_SOLARIZED_LIGHT;
                 } else if (!strcmp(optarg, "solarized-dark")) {
                     settings.theme = THEME_SOLARIZED_DARK;
+                } else if (!strcmp(optarg, "monokai")) {
+                    settings.theme = THEME_SOLARIZED_DARK;
                 } else {
                     LOG_NORM("Please specify correct theme (please check user manual for list of correct values).\n");
                     exit(EXIT_FAILURE);
