@@ -1438,6 +1438,7 @@ static UTOX_I18N_STR themedrops[] = {
     STR_THEME_ZENBURN,
     STR_THEME_SOLARIZED_LIGHT,
     STR_THEME_SOLARIZED_DARK,
+    STR_THEME_MONOKAI,
 };
 
 DROPDOWN dropdown_theme = {
