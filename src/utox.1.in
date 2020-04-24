@@ -3,7 +3,7 @@
 µTox \- Lightweight Tox client
 
 .SH SYNOPSIS
-usage: utox [--portable] [--theme <default|dark|light|highcontrast|zenburn|solarized-light|solarized-dark>] [--set=<start-on-boot|show-window|hide-window>] [--allow-root]
+usage: utox [--portable] [--theme <default|dark|light|highcontrast|zenburn|solarized-light|solarized-dark|monokai>] [--set=<start-on-boot|show-window|hide-window>] [--allow-root]
    or: utox --version
    or: utox --help
 
@@ -22,8 +22,8 @@ usage: utox [--portable] [--theme <default|dark|light|highcontrast|zenburn|solar
 .SH OPTIONS
 .IP "\fB\-t\fP \fI<THEME>\fP or \fB\-\-theme\fP \fI<THEME>\fP"
 Choose a color scheme. Possible options are \fIdefault\fP, \fIdark\fP,
-\fIlight\fP, \fIhighcontrast\fP, \fIzenburn\fP, \fIsolarized-light\fP, or
-\fIsolarized-dark\fP.
+\fIlight\fP, \fIhighcontrast\fP, \fIzenburn\fP, \fIsolarized-light\fP,
+\fIsolarized-dark\fP, or \fImonokai\fP.
 
 .IP "\fB\-p\fP or \fB\-\-portable\fP"
 Run in portable mode. All data will be saved to the tox folder in the current working directory, see FILES for more details.
