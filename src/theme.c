@@ -628,8 +628,8 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_MONOKAI: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(0x333333);
-            COLOR_BKGRND_ALT         = COLOR_PROC(0x151515);
+            COLOR_BKGRND_MAIN        = COLOR_PROC(0x2b2b24);
+            COLOR_BKGRND_ALT         = COLOR_PROC(0x202020);
             COLOR_BKGRND_LIST        = COLOR_PROC(0x222222);
             COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(0x151515);
             COLOR_BKGRND_MENU        = COLOR_PROC(0x171717);
@@ -637,7 +637,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST_HOVER;
             COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST;
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(0xdfdfdf);
+            COLOR_MAIN_TEXT         = COLOR_PROC(0xbebebe);
             COLOR_MAIN_TEXT_CHAT    = COLOR_PROC(0xffffff);
             COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(0xbbbbbb);
             COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(0x27a9bc);
@@ -657,7 +657,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_SELECTION_TEXT       = COLOR_BKGRND_MAIN;
 
             COLOR_EDGE_NORMAL         = COLOR_PROC(0x555555);
-            COLOR_EDGE_ACTIVE         = COLOR_PROC(0x228888);
+            COLOR_EDGE_ACTIVE         = COLOR_PROC(0xa45600);
             COLOR_EDGE_HOVER          = COLOR_PROC(0x999999);
             COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(0x228888);
             COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
@@ -665,6 +665,10 @@ void theme_load(const THEME loadtheme) {
             COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_AUX;
             COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE;
             COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_ACTIVEOPTION_BKGRND;
+
+            COLOR_STATUS_ONLINE = COLOR_PROC(0x00ff00);
+            COLOR_STATUS_AWAY   = COLOR_PROC(0xffff00);
+            COLOR_STATUS_BUSY   = COLOR_PROC(0xff0000);
 
             COLOR_BTN_SUCCESS_BKGRND       = COLOR_PROC(0x414141);
             COLOR_BTN_SUCCESS_TEXT         = COLOR_PROC(0x33a63d);

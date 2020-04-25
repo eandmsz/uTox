@@ -976,6 +976,9 @@ msgstr("Solarized-light")
 msgid(THEME_SOLARIZED_DARK)
 msgstr("Solarized-dark")
 
+msgid(THEME_MONOKAI)
+msgstr("Monokai")
+
 msgid(SEND_TYPING_NOTIFICATIONS)
 msgstr("Send typing notifications")
 
