@@ -33,15 +33,15 @@
 #define MONOKAI_BROWN1 0x282923
 #define MONOKAI_BROWN2 0x383830
 #define MONOKAI_BROWN3 0x3A392F
-#define MONOKAI_GRAY1 0x6D6E6A
+#define MONOKAI_GRAY1 0x70716D
 #define MONOKAI_GRAY2 0x90918B
 #define MONOKAI_GRAY3 0xD3D3D2
 #define MONOKAI_GRAY4 0x383934
 #define MONOKAI_GRAY5 0x555652
 #define MONOKAI_WHITE 0xF8F8F2
 #define MONOKAI_ORANGE1 0x51391B
-#define MONOKAI_ORANGE2 0x9D550F
-#define MONOKAI_ORANGE3 0xA45600
+#define MONOKAI_ORANGE2 0xA45600
+#define MONOKAI_ORANGE3 0x9D550F
 
 /* Reaper color scheme */
 #define REAPER_GRAY0 0x2B2B2B
@@ -726,7 +726,7 @@ void theme_load(const THEME loadtheme) {
 
             COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
             COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
-            COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT; // Settings gear color when settings opened
+            COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT_SUBTEXT; // Settings gear color when settings opened
 
             COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
             COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
@@ -736,14 +736,14 @@ void theme_load(const THEME loadtheme) {
             COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_SUBTEXT;
             COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
-            COLOR_SELECTION_BACKGROUND = COLOR_PROC(MONOKAI_BROWN2); // Selected text bg in chat or in input boxes
+            COLOR_SELECTION_BACKGROUND = COLOR_PROC(MONOKAI_ORANGE1); // Selected text bg in chat or in input boxes
             COLOR_SELECTION_TEXT       = COLOR_MAIN_TEXT; // Selected text font color in chat or input boxes
 
 			COLOR_EDGE_NORMAL         = COLOR_PROC(MONOKAI_GRAY4); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
             COLOR_EDGE_HOVER          = COLOR_PROC(MONOKAI_GRAY5); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
             COLOR_EDGE_ACTIVE         = COLOR_PROC(MONOKAI_ORANGE3); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
             COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(MONOKAI_ORANGE3); // Dropdown menu hover item bg
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT_SUBTEXT;; // Dropdown menu hover item text
+            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
 
             COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_LIST; // "Search/Add Friends" edge
             COLOR_AUX_EDGE_HOVER          = COLOR_BKGRND_LIST; // "Search/Add Friends" hovered edge
@@ -771,13 +771,13 @@ void theme_load(const THEME loadtheme) {
             COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(0xFFFFFF); // Same as above but for hover
             COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_BKGRND_MAIN; // Same as above but for hover
 
-            COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(MONOKAI_GRAY1); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
-            COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(MONOKAI_ORANGE1); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+            COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(MONOKAI_GRAY2); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+            COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(MONOKAI_ORANGE3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
             COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(0xFFFFFF); // Same as above but for hover
             COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
             COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(SOLAR_ORANGE);
 
-            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(MONOKAI_ORANGE1); // FileTransfer progress bar: transfer progress
+            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(MONOKAI_ORANGE3); // FileTransfer progress bar: transfer progress
             COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(MONOKAI_GRAY1); // FileTransfer progress bar: bg
             COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
