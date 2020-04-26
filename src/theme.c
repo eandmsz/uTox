@@ -29,11 +29,76 @@
 #define SOLAR_GREEN 0x859900
 
 /* Monokai color scheme */
-#define MONOKAI_BACKGROUND 0x272822
-#define MONOKAI_DARK_BACKGROUND 0x002b36
-#define MONOKAI_LIGHTGRAY 0x888A85
-#define MONOKAI_GRAY 0x3E3D32
-#define MONOKAI_ORANGE 0x9D550F
+#define MONOKAI_BROWN1 0x282923
+#define MONOKAI_BROWN2 0x383830
+#define MONOKAI_BROWN3 0x3A392F
+#define MONOKAI_GRAY1 0x6D6E6A
+#define MONOKAI_GRAY2 0x90918B
+#define MONOKAI_GRAY3 0xD3D3D2
+#define MONOKAI_GRAY4 0x383934
+#define MONOKAI_GRAY5 0x555652
+#define MONOKAI_WHITE 0xF8F8F2
+#define MONOKAI_ORANGE1 0x51391B
+#define MONOKAI_ORANGE2 0x9D550F
+#define MONOKAI_ORANGE3 0xA45600
+
+/* Reaper color scheme */
+#define REAPER_GRAY0 0x2B2B2B
+#define REAPER_GRAY1 0x333333
+#define REAPER_GRAY2 0x454545
+#define REAPER_GRAY3 0x424242
+#define REAPER_GRAY4 0x595959
+#define REAPER_GRAY5 0x5C5C5C
+#define REAPER_GRAY6 0x747474
+#define REAPER_GRAY7 0x828282
+#define REAPER_GREEN1 0x2D4F47
+#define REAPER_GREEN2 0x339887
+#define REAPER_GREEN3 0x13BD99
+#define REAPER_GREEN4 0x00FE95
+#define REAPER_RED 0xBB2500
+#define REAPER_YELLOW 0xBFBF00
+
+/* Atom color scheme */
+#define ATOM_GRAYBLUE0 0x181A1F
+#define ATOM_GRAYBLUE1 0x21252B
+#define ATOM_GRAYBLUE2 0x252830
+#define ATOM_GRAYBLUE3 0x282C34
+#define ATOM_GRAYBLUE4 0x3E4451
+#define ATOM_GRAYBLUE5 0x353940
+#define ATOM_GRAYBLUE6 0x40444D
+#define ATOM_GRAYBLUE7 0x3A3F4B
+#define ATOM_GRAYBLUE8 0x4B5364
+#define ATOM_GRAYBLUE9 0xABB2BF
+#define ATOM_RED 0xBB263A
+#define ATOM_BLUE 0x568AF2
+#define ATOM_GREEN 0x76BB26
+#define ATOM_YELLOW 0xBBAF26
+
+/* Mojave color scheme */
+#define MOJAVE_GRAY1 0x232227
+#define MOJAVE_GRAY2 0x37363B
+#define MOJAVE_GRAY3 0xDEDFE1
+#define MOJAVE_GRAY4 0x535458
+#define MOJAVE_GRAY5 0x4F5055
+#define MOJAVE_GRAY6 0x6A696E
+#define MOJAVE_GRAY7 0xC6C7CB
+#define MOJAVE_GRAY8 0x424146
+#define MOJAVE_RED 0xFE5C52
+#define MOJAVE_GREEN 0x46C130
+#define MOJAVE_YELLOW 0xE5BF2B
+
+/* Calypso color scheme */
+#define CALYPSO_GRAY1 0x776148
+#define CALYPSO_GRAY2 0x202124
+#define CALYPSO_GRAY3 0x202124
+#define CALYPSO_GRAY4 0x454750
+#define CALYPSO_GRAY5 0x141720
+#define CALYPSO_GRAY6 0x585B62
+#define CALYPSO_GRAY7 0x424449
+#define CALYPSO_GRAY8 0x5B5E65
+#define CALYPSO_RED 0xDF4249
+#define CALYPSO_GREEN 0x159F49
+#define CALYPSO_YELLOW 0xAFA123
 
 uint32_t COLOR_BKGRND_MAIN;
 uint32_t COLOR_BKGRND_ALT;
@@ -635,71 +700,85 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_MONOKAI: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(MONOKAI_BACKGROUND);
-            COLOR_BKGRND_ALT         = COLOR_PROC(MONOKAI_DARK_BACKGROUND );
-            COLOR_BKGRND_LIST        = COLOR_PROC(0x222222);
-            COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(0x151515);
-            COLOR_BKGRND_MENU        = COLOR_PROC(0x171717);
-            COLOR_BKGRND_AUX         = COLOR_BKGRND_MENU;
-            COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST_HOVER;
-            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST;
+           COLOR_BKGRND_MAIN        = COLOR_PROC(MONOKAI_BROWN1); # Main chat area bg
+            COLOR_BKGRND_ALT         = COLOR_PROC(MONOKAI_GRAY1); # Frame color (above and below the chat area)
+            COLOR_BKGRND_AUX         = COLOR_PROC(MONOKAI_GRAY1); # "Search/Add Friends" bg
+            COLOR_BKGRND_LIST        = COLOR_PROC(MONOKAI_GRAY1); # Contact list bg
+            COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(MONOKAI_BROWN1); # Contact list hover bg
+            COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; # Settings gear bg
+            COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; # Settings gear hover bg
+            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; # Settings gear bg when settings opened
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_LIGHTGRAY);
-            COLOR_MAIN_TEXT_CHAT    = COLOR_PROC(0xffffff);
-            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(0xbbbbbb);
-            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(0x27a9bc);
-            COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION;
-            COLOR_MAIN_TEXT_QUOTE   = COLOR_PROC(0x55b317);
+            COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_WHITE); # Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
+            COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
+            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(MONOKAI_BROWN3); # Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
+            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(MONOKAI_ORANGE1); # System messages: Call started/ended, Friend has changed name, Day has changed, etc.
+            COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
+            COLOR_MAIN_TEXT_RED     = COLOR_PROC(0xFF0000);
+            COLOR_MAIN_TEXT_URL     = COLOR_PROC(SOLAR_MAGENTA); # Hyperlink in chat
+            COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; # "Search/Add Friends", "IP address", "Port", typing indicator
 
-            COLOR_MSG_USER       = COLOR_MAIN_TEXT_SUBTEXT;
-            COLOR_MSG_USER_PEND  = COLOR_PROC(0x66ccff);
-            COLOR_MSG_USER_ERROR = COLOR_MAIN_TEXT_RED;
-            COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT;
+            COLOR_MSG_USER       = COLOR_MAIN_TEXT_SUBTEXT; # Own message color that has been delivered
+            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_ACTION;	# Sent message that has NOT been delivered yet
+            COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
+            COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; # Contact's message color
 
-            COLOR_MENU_TEXT_ACTIVE = COLOR_MAIN_TEXT;
+            COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; # Settings gear icon default state, Contact avatars color, Own name in contact list
+            COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; # "All contacts" text, "Online contacts" text, your own status message on contact list
+            COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT; # Settings gear color when settings opened
 
-            COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_URL;
+            COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; # Contact list names
+            COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; # Contact list text below the names (status message)
 
-            COLOR_SELECTION_BACKGROUND = COLOR_MAIN_TEXT;
-            COLOR_SELECTION_TEXT       = COLOR_BKGRND_MAIN;
+            COLOR_GROUP_SELF  = COLOR_MAIN_TEXT;
+            COLOR_GROUP_PEER  = COLOR_MAIN_TEXT;
+            COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_SUBTEXT;
+            COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
-            COLOR_EDGE_NORMAL         = COLOR_PROC(0x555555);
-            COLOR_EDGE_ACTIVE         = COLOR_PROC(0xa45600);
-            COLOR_EDGE_HOVER          = COLOR_PROC(0x999999);
-            COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(0x228888);
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
+            COLOR_SELECTION_BACKGROUND = COLOR_PROC(MONOKAI_BROWN2); # Selected text bg in chat or in input boxes
+            COLOR_SELECTION_TEXT       = COLOR_MAIN_TEXT; #  Selected text font color in chat or input boxes
 
-            COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_AUX;
-            COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE;
-            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_ACTIVEOPTION_BKGRND;
+			COLOR_EDGE_NORMAL         = COLOR_PROC(MONOKAI_GRAY4); # Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+            COLOR_EDGE_HOVER          = COLOR_PROC(MONOKAI_GRAY5); # Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+            COLOR_EDGE_ACTIVE         = COLOR_PROC(MONOKAI_ORANGE3); # Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
+            COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(MONOKAI_ORANGE3); # Dropdown menu hover item bg
+            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT_SUBTEXT;; # Dropdown menu hover item text
 
-            COLOR_STATUS_ONLINE = COLOR_PROC(0x00ff00);
-            COLOR_STATUS_AWAY   = COLOR_PROC(0xffff00);
-            COLOR_STATUS_BUSY   = COLOR_PROC(0xff0000);
+            COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_LIST; # "Search/Add Friends" edge
+            COLOR_AUX_EDGE_HOVER          = COLOR_BKGRND_LIST; # "Search/Add Friends" hovered edge
+            COLOR_AUX_EDGE_ACTIVE         = COLOR_BKGRND_LIST; # "Search/Add Friends" input box active edge
+            COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; # "Search/Add Friends" input text
+            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
+            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
 
-            COLOR_BTN_SUCCESS_BKGRND       = COLOR_PROC(0x414141);
-            COLOR_BTN_SUCCESS_TEXT         = COLOR_PROC(0x33a63d);
-            COLOR_BTN_SUCCESS_BKGRND_HOVER = COLOR_PROC(0x455147);
-            COLOR_BTN_SUCCESS_TEXT_HOVER   = COLOR_PROC(0x6eff3a);
+            COLOR_STATUS_ONLINE = COLOR_PROC(0x00FF00);
+            COLOR_STATUS_AWAY   = COLOR_PROC(0xFFFF00);
+            COLOR_STATUS_BUSY   = COLOR_PROC(0xFF0000);
 
-            COLOR_BTN_WARNING_BKGRND       = COLOR_PROC(0x414141);
-            COLOR_BTN_WARNING_TEXT         = COLOR_PROC(0xbd9e22);
-            COLOR_BTN_WARNING_BKGRND_HOVER = COLOR_PROC(0x4c493c);
-            COLOR_BTN_WARNING_TEXT_HOVER   = COLOR_PROC(0xff8d2a);
+            COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(MONOKAI_GRAY3); # Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+            COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(MONOKAI_ORANGE1); # Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+            COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(MONOKAI_GRAY4); # Same as above but for hover
+            COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(MONOKAI_ORANGE1);; # Same as above but for hover
 
-            COLOR_BTN_DANGER_BACKGROUND   = COLOR_PROC(0x414141);
-            COLOR_BTN_DANGER_TEXT         = COLOR_PROC(0xbd2525);
-            COLOR_BTN_DANGER_BKGRND_HOVER = COLOR_PROC(0x513939);
-            COLOR_BTN_DANGER_TEXT_HOVER   = COLOR_PROC(0xfa2626);
+            COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(0xFFFFFF); # Call button bg during an incoming call
+            COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; # Call button icon color during an incoming call
+            COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(0xFFFFFF); # Same as above but for hover
+            COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_BKGRND_MAIN; # Same as above but for hover
 
-            COLOR_BTN_DISABLED_BKGRND   = COLOR_PROC(0x414141);
-            COLOR_BTN_DISABLED_TEXT     = COLOR_MAIN_TEXT;
-            COLOR_BTN_DISABLED_TRANSFER = COLOR_BTN_DISABLED_TEXT;
-            COLOR_BTN_DISABLED_FORGRND  = COLOR_PROC(0x666666);
+            COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(0xFFFFFF); # Call button bg during outgoing call and during esablished call
+            COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; # Call button icon color during outgoing call and during esablished call
+            COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(0xFFFFFF); # Same as above but for hover
+            COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_BKGRND_MAIN; # Same as above but for hover
 
-            COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BTN_DISABLED_BKGRND;
-            COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT_URL;
-            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(0x2f656a);
+            COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(MONOKAI_GRAY1); # Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+            COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(MONOKAI_ORANGE1); # Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+            COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(0xFFFFFF); # Same as above but for hover
+            COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
+            COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(SOLAR_ORANGE);
+
+            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(MONOKAI_ORANGE1); # FileTransfer progress bar: transfer progress
+            COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(MONOKAI_GRAY1); # FileTransfer progress bar: bg
+            COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT;  # FileTransfer progress bar text
             break;
         }
         case THEME_CUSTOM: {
