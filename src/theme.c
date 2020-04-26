@@ -719,7 +719,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
             COLOR_MSG_USER       = COLOR_MAIN_TEXT_SUBTEXT; // Own message color that has been delivered
-            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_ACTION;	# Sent message that has NOT been delivered yet
+            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_ACTION; // Sent message that has NOT been delivered yet
             COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
             COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; // Contact's message color
 
@@ -778,7 +778,7 @@ void theme_load(const THEME loadtheme) {
 
             COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(MONOKAI_ORANGE1); // FileTransfer progress bar: transfer progress
             COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(MONOKAI_GRAY1); // FileTransfer progress bar: bg
-            COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT;  // FileTransfer progress bar text
+            COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
         case THEME_CUSTOM: {
