@@ -33,7 +33,7 @@
 #define MONOKAI_BROWN1 0x282923
 #define MONOKAI_BROWN2 0x383830
 #define MONOKAI_BROWN3 0x3A392F
-#define MONOKAI_GRAY1 0x70716D
+#define MONOKAI_GRAY1 0x747571
 #define MONOKAI_GRAY2 0x90918B
 #define MONOKAI_GRAY3 0xD3D3D2
 #define MONOKAI_GRAY4 0x383934
@@ -41,7 +41,7 @@
 #define MONOKAI_WHITE 0xF8F8F2
 #define MONOKAI_ORANGE1 0x51391B
 #define MONOKAI_ORANGE2 0xA45600
-#define MONOKAI_ORANGE3 0x9D550F
+#define MONOKAI_ORANGE3 0xEC8319
 
 /* Reaper color scheme */
 #define REAPER_GRAY0 0x2B2B2B
@@ -757,7 +757,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_STATUS_BUSY   = COLOR_PROC(CALYPSO_RED);
 
             COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(MONOKAI_GRAY3); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
-            COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(0x00FF00); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+            COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(MONOKAI_ORANGE3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
             COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
             COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(MONOKAI_ORANGE3);; // Same as above but for hover
 
