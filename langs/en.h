@@ -962,19 +962,19 @@ msgid(THEME_DARK)
 msgstr("Dark theme")
 
 msgid(THEME_HIGHCONTRAST)
-msgstr("High contrast")
+msgstr("Calypso Dark")
 
 msgid(THEME_CUSTOM)
 msgstr("Custom (see docs)")
 
 msgid(THEME_ZENBURN)
-msgstr("Zenburn")
+msgstr("Mojave Dark")
 
 msgid(THEME_SOLARIZED_LIGHT)
-msgstr("Solarized-light")
+msgstr("Atom")
 
 msgid(THEME_SOLARIZED_DARK)
-msgstr("Solarized-dark")
+msgstr("Reaper")
 
 msgid(THEME_MONOKAI)
 msgstr("Monokai")
