@@ -29,6 +29,7 @@
 #define SOLAR_GREEN 0x859900
 
 /* Monokai color scheme */
+#define MONOKAI_BROWN0 0x002b36
 #define MONOKAI_BROWN1 0x282923
 #define MONOKAI_BROWN2 0x383830
 #define MONOKAI_BROWN3 0x3A392F
