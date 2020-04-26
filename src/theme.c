@@ -537,7 +537,7 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_SOLARIZED_DARK: {
-          COLOR_BKGRND_MAIN        = COLOR_PROC(REAPER_GRAY2); // Main chat area bg
+          COLOR_BKGRND_MAIN        = COLOR_PROC(REAPER_GRAY0); // Main chat area bg
           COLOR_BKGRND_ALT         = COLOR_PROC(REAPER_GRAY1); // Frame color (above and below the chat area)
           COLOR_BKGRND_AUX         = COLOR_PROC(REAPER_GRAY1); // "Search/Add Friends" bg
           COLOR_BKGRND_LIST        = COLOR_PROC(REAPER_GRAY1); // Contact list bg
@@ -562,7 +562,7 @@ void theme_load(const THEME loadtheme) {
 
           COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
           COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
-          COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT_SUBTEXT; // Settings gear color when settings opened
+          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(REAPER_GREEN2);; // Settings gear color when settings opened
 
           COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
           COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
@@ -573,10 +573,10 @@ void theme_load(const THEME loadtheme) {
           COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
           COLOR_SELECTION_BACKGROUND = COLOR_PROC(REAPER_GREEN2); // Selected text bg in chat or in input boxes
-          COLOR_SELECTION_TEXT       = COLOR_MAIN_TEXT; // Selected text font color in chat or input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(REAPER_GRAY0); // Selected text font color in chat or input boxes
 
           COLOR_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
-          COLOR_EDGE_HOVER          = COLOR_PROC(REAPER_GRAY3); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN3); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(REAPER_GREEN3); // Dropdown menu hover item bg
           COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
@@ -592,26 +592,26 @@ void theme_load(const THEME loadtheme) {
           COLOR_STATUS_AWAY   = COLOR_PROC(REAPER_YELLOW);
           COLOR_STATUS_BUSY   = COLOR_PROC(REAPER_RED);
 
-          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GRAY0); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
           COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(REAPER_GREEN3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
-          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GRAY0); // Same as above but for hover
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
           COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN3);; // Same as above but for hover
 
-          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GRAY0); // Call button bg during an incoming call
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Call button bg during an incoming call
           COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
-          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GRAY0); // Same as above but for hover
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
           COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_BKGRND_MAIN; // Same as above but for hover
 
-          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GRAY0); // Call button bg during outgoing call and during esablished call
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
           COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
-          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GRAY0); // Same as above but for hover
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
           COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_BKGRND_MAIN; // Same as above but for hover
 
           COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(REAPER_GRAY0); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
           COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(REAPER_GREEN3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(REAPER_GRAY0); // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
-          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(0xFFFFFF);
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
           COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
           COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
