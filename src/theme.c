@@ -29,7 +29,7 @@
 #define SOLAR_GREEN 0x859900
 
 /* Monokai color scheme */
-#define MONOKAI_BROWN0 0x002b36
+#define MONOKAI_BROWN0 0x1A1B15
 #define MONOKAI_BROWN1 0x282923
 #define MONOKAI_BROWN2 0x383830
 #define MONOKAI_BROWN3 0x3A392F
@@ -712,10 +712,10 @@ void theme_load(const THEME loadtheme) {
 
             COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_WHITE); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
             COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
-            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(MONOKAI_BROWN3); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
+            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(MONOKAI_GRAY1); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
             COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(MONOKAI_ORANGE3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
             COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
-            COLOR_MAIN_TEXT_RED     = COLOR_PROC(0xFF0000);
+            COLOR_MAIN_TEXT_RED     = COLOR_PROC(CALYPSO_RED);
             COLOR_MAIN_TEXT_URL     = COLOR_PROC(SOLAR_MAGENTA); // Hyperlink in chat
             COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
@@ -737,7 +737,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
             COLOR_SELECTION_BACKGROUND = COLOR_PROC(MONOKAI_BROWN2); // Selected text bg in chat or in input boxes
-            COLOR_SELECTION_TEXT       = COLOR_MAIN_TEXT; //  Selected text font color in chat or input boxes
+            COLOR_SELECTION_TEXT       = COLOR_MAIN_TEXT; // Selected text font color in chat or input boxes
 
 			COLOR_EDGE_NORMAL         = COLOR_PROC(MONOKAI_GRAY4); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
             COLOR_EDGE_HOVER          = COLOR_PROC(MONOKAI_GRAY5); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
@@ -752,14 +752,14 @@ void theme_load(const THEME loadtheme) {
             COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
             COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
 
-            COLOR_STATUS_ONLINE = COLOR_PROC(0x00FF00);
-            COLOR_STATUS_AWAY   = COLOR_PROC(0xFFFF00);
-            COLOR_STATUS_BUSY   = COLOR_PROC(0xFF0000);
+            COLOR_STATUS_ONLINE = COLOR_PROC(CALYPSO_GREEN);
+            COLOR_STATUS_AWAY   = COLOR_PROC(CALYPSO_YELLOW);
+            COLOR_STATUS_BUSY   = COLOR_PROC(CALYPSO_RED);
 
             COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(MONOKAI_GRAY3); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
-            COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(MONOKAI_ORANGE1); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+            COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(MONOKAI_ORANGE3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
             COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
-            COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(MONOKAI_ORANGE1);; // Same as above but for hover
+            COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(MONOKAI_ORANGE3);; // Same as above but for hover
 
             COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(0xFFFFFF); // Call button bg during an incoming call
             COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
