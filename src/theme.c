@@ -701,9 +701,9 @@ void theme_load(const THEME loadtheme) {
         }
         case THEME_MONOKAI: {
             COLOR_BKGRND_MAIN        = COLOR_PROC(MONOKAI_BROWN1); // Main chat area bg
-            COLOR_BKGRND_ALT         = COLOR_PROC(MONOKAI_GRAY1); // Frame color (above and below the chat area)
-            COLOR_BKGRND_AUX         = COLOR_PROC(MONOKAI_GRAY1); // "Search/Add Friends" bg
-            COLOR_BKGRND_LIST        = COLOR_PROC(MONOKAI_GRAY1); // Contact list bg
+            COLOR_BKGRND_ALT         = COLOR_PROC(MONOKAI_BROWN0); // Frame color (above and below the chat area)
+            COLOR_BKGRND_AUX         = COLOR_PROC(MONOKAI_BROWN0); // "Search/Add Friends" bg
+            COLOR_BKGRND_LIST        = COLOR_PROC(MONOKAI_BROWN0); // Contact list bg
             COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(MONOKAI_BROWN1); // Contact list hover bg
             COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
             COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
@@ -712,14 +712,14 @@ void theme_load(const THEME loadtheme) {
             COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_WHITE); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
             COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
             COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(MONOKAI_BROWN3); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
-            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(MONOKAI_ORANGE1); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
+            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(MONOKAI_ORANGE3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
             COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
             COLOR_MAIN_TEXT_RED     = COLOR_PROC(0xFF0000);
             COLOR_MAIN_TEXT_URL     = COLOR_PROC(SOLAR_MAGENTA); // Hyperlink in chat
             COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
-            COLOR_MSG_USER       = COLOR_MAIN_TEXT_SUBTEXT; // Own message color that has been delivered
-            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_ACTION; // Sent message that has NOT been delivered yet
+            COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
+            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_SUBTEXT; // Sent message that has NOT been delivered yet
             COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
             COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; // Contact's message color
 
