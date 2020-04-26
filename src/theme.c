@@ -28,6 +28,13 @@
 #define SOLAR_CYAN 0x2aa198
 #define SOLAR_GREEN 0x859900
 
+/* Monokai color scheme */
+#define MONOKAI_BACKGROUND 0x272822
+#define MONOKAI_DARK_BACKGROUND 0x002b36
+#define MONOKAI_LIGHTGRAY 0x888A85
+#define MONOKAI_GRAY 0x3E3D32
+#define MONOKAI_ORANGE 0x9D550F
+
 uint32_t COLOR_BKGRND_MAIN;
 uint32_t COLOR_BKGRND_ALT;
 uint32_t COLOR_BKGRND_AUX;
@@ -466,8 +473,8 @@ void theme_load(const THEME loadtheme) {
         case THEME_SOLARIZED_DARK: {
             COLOR_BKGRND_MAIN        = COLOR_PROC(SOLAR_BASE03);
             COLOR_BKGRND_ALT         = COLOR_PROC(SOLAR_BASE02);
-            COLOR_BKGRND_AUX         = COLOR_BKGRND_ALT;
-            COLOR_BKGRND_LIST        = COLOR_BKGRND_ALT;
+            COLOR_BKGRND_AUX         = COLOR_PROC(0xEE00CC);
+            COLOR_BKGRND_LIST        = COLOR_PROC(0x00FF00);
             COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(SOLAR_BASE01);
             COLOR_BKGRND_MENU        = COLOR_PROC(SOLAR_BASE03);
             COLOR_BKGRND_MENU_HOVER  = COLOR_PROC(SOLAR_CYAN);
@@ -628,8 +635,8 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_MONOKAI: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(0x2b2b24);
-            COLOR_BKGRND_ALT         = COLOR_PROC(0x202020);
+            COLOR_BKGRND_MAIN        = COLOR_PROC(MONOKAI_BACKGROUND);
+            COLOR_BKGRND_ALT         = COLOR_PROC(MONOKAI_DARK_BACKGROUND );
             COLOR_BKGRND_LIST        = COLOR_PROC(0x222222);
             COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(0x151515);
             COLOR_BKGRND_MENU        = COLOR_PROC(0x171717);
@@ -637,7 +644,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST_HOVER;
             COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST;
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(0xbebebe);
+            COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_LIGHTGRAY);
             COLOR_MAIN_TEXT_CHAT    = COLOR_PROC(0xffffff);
             COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(0xbbbbbb);
             COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(0x27a9bc);
