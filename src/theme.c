@@ -38,7 +38,7 @@
 #define MONOKAI_GRAY3 0xD3D3D2
 #define MONOKAI_GRAY4 0x383934
 #define MONOKAI_GRAY5 0x555652
-#define MONOKAI_WHITE 0xDEDED8
+#define MONOKAI_WHITE 0xDADAD4
 #define MONOKAI_ORANGE1 0x51391B
 #define MONOKAI_ORANGE2 0xA45600
 #define MONOKAI_ORANGE3 0xEC8319
@@ -51,7 +51,7 @@
 #define REAPER_GRAY4 0x595959
 #define REAPER_GRAY5 0x5C5C5C
 #define REAPER_GRAY6 0x747474
-#define REAPER_GRAY7 0x8A8A8A
+#define REAPER_GRAY7 0x909090
 #define REAPER_GREEN1 0x2D4F47
 #define REAPER_GREEN2 0x339887
 #define REAPER_GREEN3 0x13BD99
@@ -68,7 +68,7 @@
 #define ATOM_GRAYBLUE4 0x3E4451
 #define ATOM_GRAYBLUE5 0x353940
 #define ATOM_GRAYBLUE6 0x40444D
-#define ATOM_GRAYBLUE7 0x3A3F4B
+#define ATOM_GRAYBLUE7 0x3B4048
 #define ATOM_GRAYBLUE8 0x4B5364
 #define ATOM_GRAYBLUE9 0xABB2BF
 #define ATOM_RED 0xBB263A
@@ -399,7 +399,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(REAPER_GREEN3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
           COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
           COLOR_MAIN_TEXT_RED     = COLOR_PROC(REAPER_RED);
-          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
           COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
           COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
@@ -426,7 +426,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_EDGE_HOVER          = COLOR_PROC(CALYPSO_GRAY8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(CALYPSO_GRAY8); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(CALYPSO_GRAY3); // Dropdown menu hover item bg
-          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
 
           COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
           COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
@@ -481,7 +481,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(REAPER_GREEN3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
           COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
           COLOR_MAIN_TEXT_RED     = COLOR_PROC(MOJAVE_RED);
-          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
           COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
           COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
@@ -508,7 +508,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_EDGE_HOVER          = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu hover item bg
-          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
 
           COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
           COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
@@ -563,7 +563,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(REAPER_GREEN3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
           COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
           COLOR_MAIN_TEXT_RED     = COLOR_PROC(REAPER_RED);
-          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
           COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
           COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
@@ -590,11 +590,11 @@ void theme_load(const THEME loadtheme) {
           COLOR_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(REAPER_GREEN3); // Dropdown menu hover item bg
-          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
 
-          COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
-          COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
-          COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // "Search/Add Friends" input box active edge
+          COLOR_AUX_EDGE_NORMAL         = COLOR_EDGE_NORMAL; // "Search/Add Friends" edge
+          COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
+          COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
           COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
           COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
           COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
@@ -631,10 +631,10 @@ void theme_load(const THEME loadtheme) {
         }
         case THEME_SOLARIZED_LIGHT: {
           COLOR_BKGRND_MAIN        = COLOR_PROC(ATOM_GRAYBLUE3); // Main chat area bg
-          COLOR_BKGRND_ALT         = COLOR_PROC(ATOM_GRAYBLUE2); // Frame color (above and below the chat area)
-          COLOR_BKGRND_AUX         = COLOR_PROC(ATOM_GRAYBLUE2); // "Search/Add Friends" bg
-          COLOR_BKGRND_LIST        = COLOR_PROC(ATOM_GRAYBLUE2); // Contact list bg
-          COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(ATOM_GRAYBLUE2); // Contact list hover bg
+          COLOR_BKGRND_ALT         = COLOR_PROC(ATOM_GRAYBLUE1); // Frame color (above and below the chat area)
+          COLOR_BKGRND_AUX         = COLOR_PROC(ATOM_GRAYBLUE1); // "Search/Add Friends" bg
+          COLOR_BKGRND_LIST        = COLOR_PROC(ATOM_GRAYBLUE1); // Contact list bg
+          COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(ATOM_GRAYBLUE1); // Contact list hover bg
           COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
           COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
           COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; // Settings gear bg when settings opened
@@ -645,7 +645,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(ATOM_BLUE); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
           COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
           COLOR_MAIN_TEXT_RED     = COLOR_PROC(REAPER_RED);
-          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
           COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
           COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
@@ -668,15 +668,15 @@ void theme_load(const THEME loadtheme) {
           COLOR_SELECTION_BACKGROUND = COLOR_PROC(ATOM_GRAYBLUE4); // Selected text bg in chat or in input boxes
           COLOR_SELECTION_TEXT       = COLOR_PROC(ATOM_GRAYBLUE8); // Selected text font color in chat or input boxes
 
-          COLOR_EDGE_NORMAL         = COLOR_PROC(ATOM_BLUE); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
-          COLOR_EDGE_HOVER          = COLOR_PROC(ATOM_BLUE); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_NORMAL         = COLOR_PROC(ATOM_GRAYBLUE7); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+          COLOR_EDGE_HOVER          = COLOR_PROC(ATOM_GRAYBLUE8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(ATOM_BLUE); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(ATOM_BLUE); // Dropdown menu hover item bg
-          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
 
-          COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
-          COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
-          COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // "Search/Add Friends" input box active edge
+          COLOR_AUX_EDGE_NORMAL         = COLOR_EDGE_NORMAL; // "Search/Add Friends" edge
+          COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
+          COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
           COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
           COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
           COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
@@ -727,7 +727,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(MONOKAI_ORANGE3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
             COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
             COLOR_MAIN_TEXT_RED     = COLOR_PROC(CALYPSO_RED);
-            COLOR_MAIN_TEXT_URL     = COLOR_PROC(SOLAR_MAGENTA); // Hyperlink in chat
+            COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
             COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
             COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
@@ -754,11 +754,11 @@ void theme_load(const THEME loadtheme) {
             COLOR_EDGE_HOVER          = COLOR_PROC(MONOKAI_GRAY5); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
             COLOR_EDGE_ACTIVE         = COLOR_PROC(MONOKAI_ORANGE3); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
             COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(MONOKAI_ORANGE3); // Dropdown menu hover item bg
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
+            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
 
-            COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(MONOKAI_GRAY4); // "Search/Add Friends" edge
-            COLOR_AUX_EDGE_HOVER          = COLOR_BKGRND_LIST; // "Search/Add Friends" hovered edge
-            COLOR_AUX_EDGE_ACTIVE         = COLOR_BKGRND_LIST; // "Search/Add Friends" input box active edge
+            COLOR_AUX_EDGE_NORMAL         = COLOR_EDGE_NORMAL; // "Search/Add Friends" edge
+            COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
+            COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
             COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
             COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
             COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
