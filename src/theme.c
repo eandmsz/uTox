@@ -54,8 +54,8 @@
 #define REAPER_GRAY7 0x939393
 #define REAPER_GREEN1 0x2D4F47
 #define REAPER_GREEN2 0x339887
-#define REAPER_GREEN3 0x15BF9B
-#define REAPER_GREEN4 0x33CCB3
+#define REAPER_GREEN3 0x12BC98
+#define REAPER_GREEN4 0x35CEB5
 #define REAPER_GREEN 0x00FE95
 #define REAPER_RED 0xBB2500
 #define REAPER_YELLOW 0xBFBF00
@@ -596,8 +596,8 @@ void theme_load(const THEME loadtheme) {
           COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
           COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
           COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
-          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
-          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_BKGRND_AUX;
+          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
 
           COLOR_STATUS_ONLINE = COLOR_PROC(REAPER_GREEN);
           COLOR_STATUS_AWAY   = COLOR_PROC(REAPER_YELLOW);
@@ -678,8 +678,8 @@ void theme_load(const THEME loadtheme) {
           COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
           COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
           COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
-          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
-          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_BKGRND_AUX;
+          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
 
           COLOR_STATUS_ONLINE = COLOR_PROC(ATOM_BLUE);
           COLOR_STATUS_AWAY   = COLOR_PROC(ATOM_YELLOW);
@@ -695,14 +695,14 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(ATOM_GRAYBLUE5); // Same as above but for hover
           COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_MAIN_TEXT; // Same as above but for hover
 
-          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(ATOM_GRAYBLUE0); // Call button bg during outgoing call and during esablished call
           COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
-          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
-          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(ATOM_GRAYBLUE0); // Same as above but for hover
+          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_MAIN_TEXT; // Same as above but for hover
 
-          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(REAPER_GREEN1); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
-          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(REAPER_GREEN3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
-          COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(ATOM_GRAYBLUE0); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_TEXT         = COLOR_MAIN_TEXT; // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+          COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(ATOM_GRAYBLUE0); // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
           COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
@@ -760,31 +760,31 @@ void theme_load(const THEME loadtheme) {
             COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_HOVER; // "Search/Add Friends" hovered edge
             COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE; // "Search/Add Friends" input box active edge
             COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
-            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
-            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
+            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_BKGRND_AUX;
+            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
 
             COLOR_STATUS_ONLINE = COLOR_PROC(CALYPSO_GREEN);
             COLOR_STATUS_AWAY   = COLOR_PROC(CALYPSO_YELLOW);
             COLOR_STATUS_BUSY   = COLOR_PROC(CALYPSO_RED);
 
-            COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(MONOKAI_GRAY3); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+            COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(MONOKAI_GRAY4); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
             COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(MONOKAI_ORANGE3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
             COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
             COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(MONOKAI_ORANGE3); // Same as above but for hover
 
-            COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(0xFFFFFF); // Call button bg during an incoming call
+            COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(MONOKAI_GRAY4); // Call button bg during an incoming call
             COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
-            COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(0xFFFFFF); // Same as above but for hover
+            COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
             COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_BKGRND_MAIN; // Same as above but for hover
 
-            COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(0xFFFFFF); // Call button bg during outgoing call and during esablished call
+            COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(MONOKAI_GRAY4); // Call button bg during outgoing call and during esablished call
             COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
-            COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(0xFFFFFF); // Same as above but for hover
+            COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
             COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_BKGRND_MAIN; // Same as above but for hover
 
             COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(MONOKAI_GRAY2); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
             COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(MONOKAI_ORANGE3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
-            COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(0xFFFFFF); // Same as above but for hover
+            COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(MONOKAI_GRAY4); // Same as above but for hover
             COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
             COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(SOLAR_ORANGE);
 
