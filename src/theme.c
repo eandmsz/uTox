@@ -33,12 +33,12 @@
 #define MONOKAI_BROWN1 0x282923
 #define MONOKAI_BROWN2 0x383830
 #define MONOKAI_BROWN3 0x3A392F
-#define MONOKAI_GRAY1 0x747571
+#define MONOKAI_GRAY1 0x787975
 #define MONOKAI_GRAY2 0x90918B
 #define MONOKAI_GRAY3 0xD3D3D2
 #define MONOKAI_GRAY4 0x383934
 #define MONOKAI_GRAY5 0x555652
-#define MONOKAI_WHITE 0xE3E3DD
+#define MONOKAI_WHITE 0xDEDED8
 #define MONOKAI_ORANGE1 0x51391B
 #define MONOKAI_ORANGE2 0xA45600
 #define MONOKAI_ORANGE3 0xEC8319
@@ -51,7 +51,7 @@
 #define REAPER_GRAY4 0x595959
 #define REAPER_GRAY5 0x5C5C5C
 #define REAPER_GRAY6 0x747474
-#define REAPER_GRAY7 0x828282
+#define REAPER_GRAY7 0x8A8A8A
 #define REAPER_GREEN1 0x2D4F47
 #define REAPER_GREEN2 0x339887
 #define REAPER_GREEN3 0x13BD99
@@ -384,157 +384,167 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_HIGHCONTRAST: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(0xffffff);
-            COLOR_BKGRND_AUX         = COLOR_BKGRND_MAIN;
-            COLOR_BKGRND_LIST        = COLOR_PROC(0x444444);
-            COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(0x000001);
-            COLOR_BKGRND_MENU        = COLOR_BKGRND_MAIN;
-            COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_MAIN;
-            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST_HOVER;
+          COLOR_BKGRND_MAIN        = COLOR_PROC(CALYPSO_GRAY1); // Main chat area bg
+          COLOR_BKGRND_ALT         = COLOR_PROC(CALYPSO_GRAY2); // Frame color (above and below the chat area)
+          COLOR_BKGRND_AUX         = COLOR_PROC(CALYPSO_GRAY2); // "Search/Add Friends" bg
+          COLOR_BKGRND_LIST        = COLOR_PROC(CALYPSO_GRAY2); // Contact list bg
+          COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(CALYPSO_GRAY2); // Contact list hover bg
+          COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
+          COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
+          COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; // Settings gear bg when settings opened
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(0x000001);
-            COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
-            COLOR_MAIN_TEXT_SUBTEXT = COLOR_MAIN_TEXT;
-            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(0x0000ff);
-            COLOR_MAIN_TEXT_QUOTE   = COLOR_PROC(0x00ff00);
-            COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION;
-            COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT;
+          COLOR_MAIN_TEXT         = COLOR_PROC(CALYPSO_GRAY6); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
+          COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
+          COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(CALYPSO_GRAY7); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
+          COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(REAPER_GREEN3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
+          COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_MAIN_TEXT_RED     = COLOR_PROC(REAPER_RED);
+          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
-            COLOR_MENU_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT;
-            COLOR_MENU_TEXT_ACTIVE  = COLOR_BKGRND_MAIN;
+          COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
+          COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_SUBTEXT; // Sent message that has NOT been delivered yet
+          COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
+          COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; // Contact's message color
 
-            COLOR_LIST_TEXT         = COLOR_BKGRND_MAIN;
-            COLOR_LIST_TEXT_SUBTEXT = COLOR_BKGRND_MAIN;
+          COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
+          COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
+          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(REAPER_GREEN3);; // Settings gear color when settings opened
 
-            COLOR_GROUP_SELF  = COLOR_PROC(0x00ff00);
-            COLOR_GROUP_PEER  = COLOR_MAIN_TEXT_HINT;
-            COLOR_GROUP_AUDIO = COLOR_PROC(0xff0000);
-            COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_URL;
+          COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
+          COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
 
-            COLOR_SELECTION_BACKGROUND = COLOR_MAIN_TEXT;
-            COLOR_SELECTION_TEXT       = COLOR_BKGRND_MAIN;
+          COLOR_GROUP_SELF  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_PEER  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
-            COLOR_EDGE_NORMAL         = COLOR_MAIN_TEXT;
-            COLOR_EDGE_ACTIVE         = COLOR_MAIN_TEXT;
-            COLOR_EDGE_HOVER          = COLOR_MAIN_TEXT;
-            COLOR_ACTIVEOPTION_BKGRND = COLOR_MAIN_TEXT;
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_BKGRND_MAIN;
+          COLOR_SELECTION_BACKGROUND = COLOR_PROC(REAPER_GREEN2); // Selected text bg in chat or in input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(REAPER_GRAY5); // Selected text font color in chat or input boxes
 
-            COLOR_AUX_EDGE_NORMAL         = COLOR_EDGE_NORMAL;
-            COLOR_AUX_EDGE_HOVER          = COLOR_EDGE_NORMAL;
-            COLOR_AUX_EDGE_ACTIVE         = COLOR_EDGE_ACTIVE;
-            COLOR_AUX_TEXT                = COLOR_MAIN_TEXT;
-            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_ACTIVEOPTION_BKGRND;
-            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_ACTIVEOPTION_TEXT;
+          COLOR_EDGE_NORMAL         = COLOR_PROC(CALYPSO_GRAY3); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+          COLOR_EDGE_HOVER          = COLOR_PROC(CALYPSO_GRAY8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_ACTIVE         = COLOR_PROC(CALYPSO_GRAY8); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
+          COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(CALYPSO_GRAY3); // Dropdown menu hover item bg
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
 
-            COLOR_STATUS_ONLINE = COLOR_PROC(0x00ff00);
-            COLOR_STATUS_AWAY   = COLOR_PROC(0xffff00);
-            COLOR_STATUS_BUSY   = COLOR_PROC(0xff0000);
+          COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
+          COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
+          COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // "Search/Add Friends" input box active edge
+          COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
+          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
 
-            COLOR_BTN_SUCCESS_BKGRND       = COLOR_PROC(0x00ff00);
-            COLOR_BTN_SUCCESS_TEXT         = COLOR_BKGRND_MAIN;
-            COLOR_BTN_SUCCESS_BKGRND_HOVER = COLOR_PROC(0x00ff00);
-            COLOR_BTN_SUCCESS_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_STATUS_ONLINE = COLOR_PROC(CALYPSO_GREEN);
+          COLOR_STATUS_AWAY   = COLOR_PROC(CALYPSO_YELLOW);
+          COLOR_STATUS_BUSY   = COLOR_PROC(CALYPSO_RED);
 
-            COLOR_BTN_WARNING_BKGRND       = COLOR_PROC(0xffff00);
-            COLOR_BTN_WARNING_TEXT         = COLOR_BKGRND_MAIN;
-            COLOR_BTN_WARNING_BKGRND_HOVER = COLOR_PROC(0xffff00);
-            COLOR_BTN_WARNING_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+          COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(REAPER_GREEN3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DANGER_BACKGROUND   = COLOR_PROC(0xff0000);
-            COLOR_BTN_DANGER_TEXT         = COLOR_BKGRND_MAIN;
-            COLOR_BTN_DANGER_BKGRND_HOVER = COLOR_PROC(0xff0000);
-            COLOR_BTN_DANGER_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Call button bg during an incoming call
+          COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DISABLED_BKGRND   = COLOR_PROC(0x444444);
-            COLOR_BTN_DISABLED_TEXT     = COLOR_MAIN_TEXT;
-            COLOR_BTN_DISABLED_TRANSFER = COLOR_BKGRND_MAIN;
-            COLOR_BTN_DISABLED_FORGRND  = COLOR_PROC(0x000000);
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
+          COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_INPROGRESS_TEXT   = COLOR_BTN_DISABLED_TEXT;
-            COLOR_BTN_INPROGRESS_BKGRND = COLOR_PROC(0x00ffff);
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(REAPER_GREEN1); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(REAPER_GREEN3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+          COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
+
+          COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
+          COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
         case THEME_ZENBURN: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(0x3f3f3f);
-            COLOR_BKGRND_AUX         = COLOR_BKGRND_MAIN;
-            COLOR_BKGRND_LIST        = COLOR_PROC(0x5f5f5f);
-            COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(0x7f7f7f);
-            COLOR_BKGRND_MENU        = COLOR_BKGRND_MAIN;
-            COLOR_BKGRND_MENU_HOVER  = COLOR_PROC(0x7f9f7f);
-            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_MENU_HOVER;
+          COLOR_BKGRND_MAIN        = COLOR_PROC(MOJAVE_GRAY1); // Main chat area bg
+          COLOR_BKGRND_ALT         = COLOR_PROC(MOJAVE_GRAY2); // Frame color (above and below the chat area)
+          COLOR_BKGRND_AUX         = COLOR_PROC(MOJAVE_GRAY2); // "Search/Add Friends" bg
+          COLOR_BKGRND_LIST        = COLOR_PROC(MOJAVE_GRAY2); // Contact list bg
+          COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(MOJAVE_GRAY5); // Contact list hover bg
+          COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
+          COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
+          COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; // Settings gear bg when settings opened
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(0xEE00CC);
-            COLOR_MAIN_TEXT_CHAT    = COLOR_PROC(0x00FF00);
-            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(0x0000FF);
-            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(0xd0bf8f);
-            COLOR_MAIN_TEXT_QUOTE   = COLOR_PROC(0x7f9f7f);
-            COLOR_MAIN_TEXT_RED     = COLOR_PROC(0xcc9393);
-            COLOR_MAIN_TEXT_URL     = COLOR_PROC(0x6ca0a3);
-            COLOR_MAIN_TEXT_HINT    = COLOR_PROC(0xFFFFFF);
+          COLOR_MAIN_TEXT         = COLOR_PROC(MOJAVE_GRAY3); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
+          COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
+          COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(MOJAVE_GRAY4); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
+          COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(REAPER_GREEN3); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
+          COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_MAIN_TEXT_RED     = COLOR_PROC(MOJAVE_RED);
+          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
-            COLOR_MSG_USER          = COLOR_PROC(0xFFFFFF);
-            COLOR_MSG_USER_PEND     = COLOR_MAIN_TEXT_ACTION;
-            COLOR_MSG_USER_ERROR    = COLOR_MAIN_TEXT_RED;
-            COLOR_MSG_CONTACT       = COLOR_PROC(0xFFFFFF);
+          COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
+          COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_SUBTEXT; // Sent message that has NOT been delivered yet
+          COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
+          COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; // Contact's message color
 
-            COLOR_MENU_TEXT         = COLOR_PROC(0xFFFFFF);
-            COLOR_MENU_TEXT_SUBTEXT = COLOR_PROC(0xFFFFFF);
-            COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(0xFFFFFF);
+          COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
+          COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
+          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(REAPER_GREEN3);; // Settings gear color when settings opened
 
-            COLOR_LIST_TEXT         = COLOR_PROC(0xFFFFFF);
-            COLOR_LIST_TEXT_SUBTEXT = COLOR_PROC(0xFFFFFF);
+          COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
+          COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
 
-            COLOR_GROUP_SELF  = COLOR_MAIN_TEXT;
-            COLOR_GROUP_PEER  = COLOR_MAIN_TEXT;
-            COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_ACTION;
+          COLOR_GROUP_SELF  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_PEER  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
-            COLOR_SELECTION_BACKGROUND = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_SELECTION_TEXT       = COLOR_PROC(0xFFFFFF);
+          COLOR_SELECTION_BACKGROUND = COLOR_PROC(MOJAVE_GRAY8); // Selected text bg in chat or in input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(MOJAVE_GRAY4); // Selected text font color in chat or input boxes
 
-            COLOR_EDGE_NORMAL         = COLOR_BKGRND_LIST;
-            COLOR_EDGE_ACTIVE         = COLOR_PROC(0xFFFFFF);
-            COLOR_EDGE_HOVER          = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_ACTIVEOPTION_BKGRND = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
+          COLOR_EDGE_NORMAL         = COLOR_PROC(MOJAVE_GRAY8); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+          COLOR_EDGE_HOVER          = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_ACTIVE         = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
+          COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(MOJAVE_GRAY8); // Dropdown menu hover item bg
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
 
-            COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_LIST;
-            COLOR_AUX_EDGE_HOVER          = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(0xFFFFFF);
-            COLOR_AUX_TEXT                = COLOR_PROC(0xFFFFFF);
-            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
+          COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
+          COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // "Search/Add Friends" input box active edge
+          COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
+          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
 
-            COLOR_STATUS_ONLINE = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_STATUS_AWAY   = COLOR_MAIN_TEXT_ACTION;
-            COLOR_STATUS_BUSY   = COLOR_MAIN_TEXT_RED;
+          COLOR_STATUS_ONLINE = COLOR_PROC(MOJAVE_GREEN);
+          COLOR_STATUS_AWAY   = COLOR_PROC(MOJAVE_YELLOW);
+          COLOR_STATUS_BUSY   = COLOR_PROC(MOJAVE_RED);
 
-            COLOR_BTN_SUCCESS_BKGRND       = COLOR_MAIN_TEXT_QUOTE;
-            COLOR_BTN_SUCCESS_TEXT         = COLOR_PROC(0xFFFFFF);
-            COLOR_BTN_SUCCESS_BKGRND_HOVER = COLOR_PROC(0xbfebbf);
-            COLOR_BTN_SUCCESS_TEXT_HOVER   = COLOR_PROC(0xffffff);
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+          COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(REAPER_GREEN3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_WARNING_BKGRND       = COLOR_MAIN_TEXT_ACTION;
-            COLOR_BTN_WARNING_TEXT         = COLOR_BTN_SUCCESS_TEXT_HOVER;
-            COLOR_BTN_WARNING_BKGRND_HOVER = COLOR_PROC(0xf0dfaf);
-            COLOR_BTN_WARNING_TEXT_HOVER   = COLOR_BTN_SUCCESS_TEXT_HOVER;
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Call button bg during an incoming call
+          COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DANGER_BACKGROUND   = COLOR_STATUS_AWAY;
-            COLOR_BTN_DANGER_TEXT         = COLOR_PROC(0xFFFFFF);
-            COLOR_BTN_DANGER_BKGRND_HOVER = COLOR_PROC(0xdca3a3);
-            COLOR_BTN_DANGER_TEXT_HOVER   = COLOR_BTN_SUCCESS_TEXT_HOVER;
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
+          COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DISABLED_BKGRND       = COLOR_BKGRND_LIST;
-            COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(0xFFFFFF);
-            COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BKGRND_LIST_HOVER;
-            COLOR_BTN_DISABLED_TRANSFER     = COLOR_PROC(0xFFFFFF);;
-            COLOR_BTN_DISABLED_FORGRND      = COLOR_BKGRND_LIST_HOVER;
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(REAPER_GREEN1); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(REAPER_GREEN3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+          COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
-            COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(0xc1c1a4);
-            COLOR_BTN_INPROGRESS_TEXT    = COLOR_BKGRND_MAIN;
-            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(0xFFFFFF);
+          COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
+          COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
         case THEME_SOLARIZED_DARK: {
@@ -574,7 +584,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
           COLOR_SELECTION_BACKGROUND = COLOR_PROC(REAPER_GREEN2); // Selected text bg in chat or in input boxes
-          COLOR_SELECTION_TEXT       = COLOR_PROC(REAPER_GRAY0); // Selected text font color in chat or input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(REAPER_GRAY5); // Selected text font color in chat or input boxes
 
           COLOR_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
           COLOR_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
@@ -620,85 +630,85 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_SOLARIZED_LIGHT: {
-            COLOR_BKGRND_MAIN        = COLOR_PROC(SOLAR_BASE3);
-            COLOR_BKGRND_ALT         = COLOR_PROC(SOLAR_BASE2);
-            COLOR_BKGRND_AUX         = COLOR_BKGRND_ALT;
-            COLOR_BKGRND_LIST        = COLOR_BKGRND_ALT;
-            COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(SOLAR_BASE1);
-            COLOR_BKGRND_MENU        = COLOR_BKGRND_ALT;
-            COLOR_BKGRND_MENU_HOVER  = COLOR_PROC(SOLAR_CYAN);
-            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_ALT;
+          COLOR_BKGRND_MAIN        = COLOR_PROC(ATOM_GRAYBLUE3); // Main chat area bg
+          COLOR_BKGRND_ALT         = COLOR_PROC(ATOM_GRAYBLUE2); // Frame color (above and below the chat area)
+          COLOR_BKGRND_AUX         = COLOR_PROC(ATOM_GRAYBLUE2); // "Search/Add Friends" bg
+          COLOR_BKGRND_LIST        = COLOR_PROC(ATOM_GRAYBLUE2); // Contact list bg
+          COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(ATOM_GRAYBLUE2); // Contact list hover bg
+          COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
+          COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
+          COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; // Settings gear bg when settings opened
 
-            COLOR_MAIN_TEXT         = COLOR_PROC(SOLAR_BASE02);
-            COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
-            COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(SOLAR_BASE01);
-            COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(SOLAR_BASE03);
-            COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
-            COLOR_MAIN_TEXT_RED     = COLOR_PROC(SOLAR_RED);
-            COLOR_MAIN_TEXT_URL     = COLOR_PROC(SOLAR_MAGENTA);
-            COLOR_MAIN_TEXT_HINT    = COLOR_PROC(SOLAR_VIOLET);
+          COLOR_MAIN_TEXT         = COLOR_PROC(ATOM_GRAYBLUE9); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
+          COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
+          COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(ATOM_GRAYBLUE8); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
+          COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(ATOM_BLUE); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
+          COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_MAIN_TEXT_RED     = COLOR_PROC(REAPER_RED);
+          COLOR_MAIN_TEXT_URL     = COLOR_PROC(REAPER_GREEN1); // Hyperlink in chat
+          COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
-            COLOR_MSG_USER       = COLOR_MAIN_TEXT_SUBTEXT;
-            COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_ACTION;
-            COLOR_MSG_USER_ERROR = COLOR_MAIN_TEXT_RED;
-            COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT;
+          COLOR_MSG_USER       = COLOR_MAIN_TEXT; // Own message color that has been delivered
+          COLOR_MSG_USER_PEND  = COLOR_MAIN_TEXT_SUBTEXT; // Sent message that has NOT been delivered yet
+          COLOR_MSG_USER_ERROR = COLOR_PROC(0xEE00CC);
+          COLOR_MSG_CONTACT    = COLOR_MAIN_TEXT; // Contact's message color
 
-            COLOR_MENU_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT;
-            COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT;
+          COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
+          COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
+          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(ATOM_BLUE);; // Settings gear color when settings opened
 
-            COLOR_LIST_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
+          COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
 
-            COLOR_GROUP_SELF  = COLOR_PROC(SOLAR_GREEN);
-            COLOR_GROUP_PEER  = COLOR_MAIN_TEXT_HINT;
-            COLOR_GROUP_AUDIO = COLOR_PROC(SOLAR_RED);
-            COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_ACTION;
+          COLOR_GROUP_SELF  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_PEER  = COLOR_MAIN_TEXT;
+          COLOR_GROUP_AUDIO = COLOR_MAIN_TEXT_SUBTEXT;
+          COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
-            COLOR_SELECTION_BACKGROUND = COLOR_MAIN_TEXT;
-            COLOR_SELECTION_TEXT       = COLOR_BKGRND_MAIN;
+          COLOR_SELECTION_BACKGROUND = COLOR_PROC(ATOM_GRAYBLUE4); // Selected text bg in chat or in input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(ATOM_GRAYBLUE8); // Selected text font color in chat or input boxes
 
-            COLOR_EDGE_NORMAL         = COLOR_PROC(SOLAR_VIOLET);
-            COLOR_EDGE_HOVER          = COLOR_PROC(SOLAR_BLUE);
-            COLOR_EDGE_ACTIVE         = COLOR_PROC(SOLAR_CYAN);
-            COLOR_ACTIVEOPTION_BKGRND = COLOR_BKGRND_LIST_HOVER;
-            COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;
+          COLOR_EDGE_NORMAL         = COLOR_PROC(ATOM_BLUE); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+          COLOR_EDGE_HOVER          = COLOR_PROC(ATOM_BLUE); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_ACTIVE         = COLOR_PROC(ATOM_BLUE); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
+          COLOR_ACTIVEOPTION_BKGRND = COLOR_PROC(ATOM_BLUE); // Dropdown menu hover item bg
+          COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT;; // Dropdown menu hover item text
 
-            COLOR_AUX_EDGE_NORMAL         = COLOR_BKGRND_AUX;
-            COLOR_AUX_EDGE_HOVER          = COLOR_PROC(SOLAR_VIOLET);
-            COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(SOLAR_CYAN);
-            COLOR_AUX_TEXT                = COLOR_LIST_TEXT;
-            COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_BKGRND_LIST_HOVER;
-            COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_AUX_TEXT;
+          COLOR_AUX_EDGE_NORMAL         = COLOR_PROC(REAPER_GREEN2); // "Search/Add Friends" edge
+          COLOR_AUX_EDGE_HOVER          = COLOR_PROC(REAPER_GREEN4); // "Search/Add Friends" hovered edge
+          COLOR_AUX_EDGE_ACTIVE         = COLOR_PROC(REAPER_GREEN3); // "Search/Add Friends" input box active edge
+          COLOR_AUX_TEXT                = COLOR_MAIN_TEXT; // "Search/Add Friends" input text
+          COLOR_AUX_ACTIVEOPTION_BKGRND = COLOR_PROC(0xFFFFFF);
+          COLOR_AUX_ACTIVEOPTION_TEXT   = COLOR_PROC(0xFFFFFF);
 
-            COLOR_STATUS_ONLINE = COLOR_PROC(SOLAR_GREEN);
-            COLOR_STATUS_AWAY   = COLOR_PROC(SOLAR_YELLOW);
-            COLOR_STATUS_BUSY   = COLOR_PROC(SOLAR_RED);
+          COLOR_STATUS_ONLINE = COLOR_PROC(ATOM_BLUE);
+          COLOR_STATUS_AWAY   = COLOR_PROC(ATOM_YELLOW);
+          COLOR_STATUS_BUSY   = COLOR_PROC(ATOM_RED);
 
-            COLOR_BTN_SUCCESS_BKGRND       = COLOR_STATUS_ONLINE;
-            COLOR_BTN_SUCCESS_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_BTN_SUCCESS_BKGRND_HOVER = COLOR_PROC(SOLAR_CYAN);
-            COLOR_BTN_SUCCESS_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+          COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(REAPER_GREEN3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_WARNING_BKGRND       = COLOR_STATUS_AWAY;
-            COLOR_BTN_WARNING_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_BTN_WARNING_BKGRND_HOVER = COLOR_PROC(SOLAR_ORANGE);
-            COLOR_BTN_WARNING_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Call button bg during an incoming call
+          COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DANGER_BACKGROUND   = COLOR_STATUS_BUSY;
-            COLOR_BTN_DANGER_TEXT         = COLOR_MAIN_TEXT;
-            COLOR_BTN_DANGER_BKGRND_HOVER = COLOR_PROC(SOLAR_MAGENTA);
-            COLOR_BTN_DANGER_TEXT_HOVER   = COLOR_BKGRND_MAIN;
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
+          COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-            COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(SOLAR_BASE0);
-            COLOR_BTN_DISABLED_TEXT         = COLOR_BKGRND_MAIN;
-            COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BKGRND_LIST_HOVER;
-            COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
-            COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(SOLAR_ORANGE);
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(REAPER_GREEN1); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(REAPER_GREEN3); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+          COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
+          COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
-            COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(SOLAR_VIOLET);
-            COLOR_BTN_INPROGRESS_TEXT    = COLOR_BKGRND_MAIN;
-            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(SOLAR_MAGENTA);
+          COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
+          COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
         case THEME_MONOKAI: {
@@ -709,7 +719,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_BKGRND_LIST_HOVER  = COLOR_PROC(MONOKAI_BROWN1); // Contact list hover bg
             COLOR_BKGRND_MENU        = COLOR_BKGRND_LIST; // Settings gear bg
             COLOR_BKGRND_MENU_HOVER  = COLOR_BKGRND_LIST; // Settings gear hover bg
-            COLOR_BKGRND_MENU_ACTIVE = COLOR_PROC(MONOKAI_ORANGE3); // Settings gear bg when settings opened
+            COLOR_BKGRND_MENU_ACTIVE = COLOR_BKGRND_LIST; // Settings gear bg when settings opened
 
             COLOR_MAIN_TEXT         = COLOR_PROC(MONOKAI_WHITE); // Contact's avatar and name when selected in contact list and in chat header, keyboard cursor, tooltip text, settings menu text, settings menu tab text, settings menu input box text
             COLOR_MAIN_TEXT_CHAT    = COLOR_MAIN_TEXT;
@@ -727,7 +737,7 @@ void theme_load(const THEME loadtheme) {
 
             COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
             COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
-            COLOR_MENU_TEXT_ACTIVE  = COLOR_MAIN_TEXT_SUBTEXT; // Settings gear color when settings opened
+            COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(MONOKAI_ORANGE3); // Settings gear color when settings opened
 
             COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
             COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
