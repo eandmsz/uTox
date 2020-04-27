@@ -51,10 +51,10 @@
 #define REAPER_GRAY4 0x595959
 #define REAPER_GRAY5 0x5C5C5C
 #define REAPER_GRAY6 0x747474
-#define REAPER_GRAY7 0x909090
+#define REAPER_GRAY7 0x939393
 #define REAPER_GREEN1 0x2D4F47
 #define REAPER_GREEN2 0x339887
-#define REAPER_GREEN3 0x13BD99
+#define REAPER_GREEN3 0x15BF9B
 #define REAPER_GREEN4 0x33CCB3
 #define REAPER_GREEN 0x00FE95
 #define REAPER_RED 0xBB2500
@@ -624,7 +624,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
           COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
-          COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_FORGRND = COLOR_MAIN_TEXT_ACTION; // FileTransfer progress bar: transfer progress
           COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
           COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
@@ -666,7 +666,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_GROUP_MUTED = COLOR_MAIN_TEXT_SUBTEXT;
 
           COLOR_SELECTION_BACKGROUND = COLOR_PROC(ATOM_GRAYBLUE4); // Selected text bg in chat or in input boxes
-          COLOR_SELECTION_TEXT       = COLOR_PROC(ATOM_GRAYBLUE8); // Selected text font color in chat or input boxes
+          COLOR_SELECTION_TEXT       = COLOR_PROC(ATOM_GRAYBLUE5); // Selected text font color in chat or input boxes
 
           COLOR_EDGE_NORMAL         = COLOR_PROC(ATOM_GRAYBLUE7); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
           COLOR_EDGE_HOVER          = COLOR_PROC(ATOM_GRAYBLUE8); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
@@ -685,15 +685,15 @@ void theme_load(const THEME loadtheme) {
           COLOR_STATUS_AWAY   = COLOR_PROC(ATOM_YELLOW);
           COLOR_STATUS_BUSY   = COLOR_PROC(ATOM_RED);
 
-          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
-          COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(REAPER_GREEN3); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
-          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
-          COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(ATOM_BLUE); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer/Send message buttons bg in normal state
+          COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(ATOM_GRAYBLUE0); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(ATOM_BLUE); // Same as above but for hover
+          COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(ATOM_GRAYBLUE0); // Same as above but for hover
 
-          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(REAPER_GREEN1); // Call button bg during an incoming call
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(ATOM_GRAYBLUE5); // Call button bg during an incoming call
           COLOR_BTN_WARNING_TEXT          = COLOR_MAIN_TEXT; // Call button icon color during an incoming call
-          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
-          COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(ATOM_GRAYBLUE5); // Same as above but for hover
+          COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_MAIN_TEXT; // Same as above but for hover
 
           COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(REAPER_GREEN1); // Call button bg during outgoing call and during esablished call
           COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call
@@ -706,7 +706,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
           COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(REAPER_GRAY0);
 
-          COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(REAPER_GREEN3); // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_FORGRND = COLOR_MAIN_TEXT_ACTION; // FileTransfer progress bar: transfer progress
           COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(REAPER_GRAY0); // FileTransfer progress bar: bg
           COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
@@ -788,7 +788,7 @@ void theme_load(const THEME loadtheme) {
             COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
             COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(SOLAR_ORANGE);
 
-            COLOR_BTN_INPROGRESS_FORGRND = COLOR_PROC(MONOKAI_ORANGE3); // FileTransfer progress bar: transfer progress
+            COLOR_BTN_INPROGRESS_FORGRND = COLOR_MAIN_TEXT_ACTION; // FileTransfer progress bar: transfer progress
             COLOR_BTN_INPROGRESS_BKGRND  = COLOR_PROC(MONOKAI_GRAY1); // FileTransfer progress bar: bg
             COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
