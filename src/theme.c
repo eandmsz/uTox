@@ -406,7 +406,7 @@ void theme_load(const THEME loadtheme) {
             break;
         }
         case THEME_HIGHCONTRAST: {
-          COLOR_BKGRND_MAIN        = COLOR_PROC(FOSSA_MID_GRAY); // Main chat area bg
+          COLOR_BKGRND_MAIN        = COLOR_PROC(FOSSA_DARKEST_GRAY); // Main chat area bg
           COLOR_BKGRND_ALT         = COLOR_PROC(FOSSA_MID_GRAY); // Frame color (above and below the chat area)
           COLOR_BKGRND_AUX         = COLOR_PROC(FOSSA_DARK_GRAY); // "Search/Add Friends" bg
           COLOR_BKGRND_LIST        = COLOR_PROC(FOSSA_MID_GRAY); // Contact list bg
@@ -444,8 +444,8 @@ void theme_load(const THEME loadtheme) {
           COLOR_SELECTION_BACKGROUND = COLOR_PROC(FOSSA_LIGHT_TEXT); // Selected text bg in chat or in input boxes
           COLOR_SELECTION_TEXT       = COLOR_PROC(FOSSA_DARKEST_GRAY); // Selected text font color in chat or input boxes
 
-          COLOR_EDGE_NORMAL         = COLOR_PROC(FOSSA_DARKEST_GRAY); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
-          COLOR_EDGE_HOVER          = COLOR_PROC(FOSSA_DARKEST_GRAY); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
+          COLOR_EDGE_NORMAL         = COLOR_PROC(FOSSA_LIGHT_GRAY); // Settings tab edges, Dropdown menu edges, Text input box edges (IP address, Port, etc), Main Chat area top and bottom edges
+          COLOR_EDGE_HOVER          = COLOR_PROC(FOSSA_LIGHT_GRAY); // Dropdown menu edge, Text input box edges (IP address, Port, etc) when hovered
           COLOR_EDGE_ACTIVE         = COLOR_PROC(FOSSA_LIGHT_PURPLE); // Dropdown menu edge when opened, Settings tab top edge when opened, Text input box edges when active (IP address, Port, etc)
           COLOR_ACTIVEOPTION_BKGRND = COLOR_EDGE_ACTIVE; // Dropdown menu hover item bg
           COLOR_ACTIVEOPTION_TEXT   = COLOR_MAIN_TEXT; // Dropdown menu hover item text
@@ -476,7 +476,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(REAPER_GREEN1); // Same as above but for hover
           COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(REAPER_GREEN4); // Same as above but for hover
 
-          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARKEST_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
           COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
