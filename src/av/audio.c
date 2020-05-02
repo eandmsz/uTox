@@ -461,23 +461,21 @@ static struct melodies { /* C99 6.7.8/10 uninitialized arithmetic types are 0 th
     uint8_t fade;
     uint8_t notes[8];
 } normal_ring[16] = {
-    {1, 8, 4, {NOTE_d4,        }},
-    {1, 8, 4, {NOTE_d5,        }},
-    {1, 8, 4, {NOTE_d4,        }},
-    {1, 8, 4, {NOTE_d4,  }},
-    {2, 8, 4, {NOTE_d5,        }},
-    {0, 0, 0,  {0,  }},
-    {0, 0, 0,  {0,  }},
+    {1, 8, 1, {NOTE_d4,        }},
+    {1, 8, 1, {NOTE_d5,        }},
+    {1, 8, 1, {NOTE_d4,        }},
+    {1, 8, 1, {NOTE_d4,        }},
+    {1, 8, 1, {NOTE_d5,        }},
+    {1, 8, 1, {NOTE_d5,        }},
+    {1, 8, 1, {NOTE_d4,        }},
+    {1, 8, 1, {NOTE_d5,        }},	
 }, friend_offline[4] = {
     {1, 8, 1, {NOTE_c4, }},
     {1, 8, 1, {NOTE_g3, }},
     {1, 8, 1, {NOTE_g3, }},
     {0, 0, 0,  {0, }},
 }, friend_online[4] = {
-    {1, 8, 0, {NOTE_g3, }},
-    {1, 8, 1, {NOTE_g3, }},
-    {1, 8, 1, {NOTE_a4, }},
-    {1, 8, 1, {NOTE_b4, }},
+    {1, 8, 4, {NOTE_g3, }},
 }, friend_new_msg[8] = {
     {1, 0, 0,  {0, }}, /* 3/8 sec of silence for spammy friends */
     {1, 0, 0,  {0, }},
