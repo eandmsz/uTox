@@ -119,8 +119,8 @@
 #define FOSSA_MID_GRAY 0x3E3E3E
 #define FOSSA_LIGHT_GRAY 0x484848
 #define FOSSA_LIGHTEST_GRAY 0x585858
-#define FOSSA_STATUS_RED 0xDF4249
-#define FOSSA_STATUS_GREEN 0x159F49
+#define FOSSA_STATUS_RED 0xAB4448
+#define FOSSA_STATUS_GREEN 0x257F47
 #define FOSSA_STATUS_YELLOW 0xAFA123
 
 
@@ -420,7 +420,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_MAIN_TEXT_SUBTEXT = COLOR_PROC(FOSSA_DARK_TEXT); // Group chat header: "2 users in chat", "Drag friends to invite them", Contact's status messgage in chat header, Contact list status message under the contact's name when they are selected (non selected status message in contact list uses the COLOR_LIST_TEXT_SUBTEXT), your name in chat, timestamp in chat, hover action on settings tabs text
           COLOR_MAIN_TEXT_ACTION  = COLOR_PROC(FOSSA_SPOTLIGHT_TEXT); // System messages: Call started/ended, Friend has changed name, Day has changed, etc.
           COLOR_MAIN_TEXT_QUOTE   = COLOR_MAIN_TEXT_SUBTEXT;
-          COLOR_MAIN_TEXT_RED     = COLOR_MAIN_TEXT_RED;
+          COLOR_MAIN_TEXT_RED     = COLOR_PROC(FOSSA_STATUS_RED);
           COLOR_MAIN_TEXT_URL     = COLOR_MAIN_TEXT_ACTION; // Hyperlink in chat
           COLOR_MAIN_TEXT_HINT    = COLOR_MAIN_TEXT_SUBTEXT; // "Search/Add Friends", "IP address", "Port", typing indicator
 
@@ -480,7 +480,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Disabled Call/Message button icon, FileTransfer failed or cancelled text (Should be something grayish)
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_MAIN_TEXT_ACTION; // Incoming or ongoing filetransfer text
-          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle, Filetransfer paused progressbar (bg will be COLOR_BTN_INPROGRESS_BKGRND)
 
           COLOR_BTN_INPROGRESS_FORGRND = COLOR_MAIN_TEXT_ACTION; // FileTransfer progressbar: transfer progress
           COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BKGRND_ALT; // FileTransfer progressbar bg
