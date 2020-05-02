@@ -416,6 +416,7 @@ enum {
     NOTE_g3,
     NOTE_b3,
     NOTE_c4,
+	NOTE_d4,
     NOTE_a4,
     NOTE_b4,
     NOTE_e4,
