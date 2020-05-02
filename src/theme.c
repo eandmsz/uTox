@@ -111,7 +111,7 @@
 #define FOSSA_LIGHT_TEXT 0xFFFFFF
 #define FOSSA_SPOTLIGHT_TEXT 0xDF4A16
 #define FOSSA_DARK_ORANGE 0xE94915
-#define FOSSA_LIGHT_ORANGE 0xDF4A16
+#define FOSSA_LIGHT_ORANGE 0xFA6531
 #define FOSSA_DARK_PURPLE 0x783F72
 #define FOSSA_LIGHT_PURPLE 0x956490
 #define FOSSA_DARKEST_GRAY 0x343434
@@ -461,9 +461,9 @@ void theme_load(const THEME loadtheme) {
           COLOR_STATUS_AWAY   = COLOR_PROC(FOSSA_STATUS_YELLOW);
           COLOR_STATUS_BUSY   = COLOR_PROC(FOSSA_STATUS_RED);
 
-          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer finished/Send message buttons bg in normal state (Should be something non-redish so it indicates that the filetransfer was okay)
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(FOSSA_DARKEST_GRAY); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer finished/Send message buttons bg in normal state (Should be something non-redish so it indicates that the filetransfer was okay)
           COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(FOSSA_DARK_ORANGE); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer accept tick/Send message button icons in normal state
-          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(FOSSA_DARK_GRAY); // Same as above but for hover
+          COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(FOSSA_DARKEST_GRAY); // Same as above but for hover
           COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_PROC(FOSSA_LIGHT_ORANGE); // Same as above but for hover
 
           COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(FOSSA_STATUS_GREEN); // Call button bg during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
@@ -476,7 +476,7 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(FOSSA_STATUS_RED); // Same as above but for hover and also for filetransfer decline button hover bg (note that the normal state for filetransfer decline button is COLOR_BTN_SUCCESS_BKGRND)
           COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_BKGRND_AUX; // Same as above but for hover and also for filetransfer decline button hover text
 
-          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARKEST_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
           COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Disabled Call/Message button icon, FileTransfer failed or cancelled text (Should be something grayish)
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = COLOR_MAIN_TEXT_ACTION; // Incoming or ongoing filetransfer text
