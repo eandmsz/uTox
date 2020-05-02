@@ -470,17 +470,10 @@ static struct melodies { /* C99 6.7.8/10 uninitialized arithmetic types are 0 th
     {1, 8, 1, {NOTE_d5,        }},
 	{1, 0, 0,  {0, }},
 	{1, 0, 0,  {0, }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},	
+	{1, 0, 0,  {0, }},
 }, friend_offline[4] = {
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},
+	{1, 8, 1, {NOTE_g4, }},
+    {1, 8, 1, {NOTE_g3, }},
 }, friend_online[4] = {
     {1, 8, 1, {NOTE_g3, }},
 	{1, 8, 1, {NOTE_g4, }},
@@ -488,11 +481,7 @@ static struct melodies { /* C99 6.7.8/10 uninitialized arithmetic types are 0 th
     {1, 0, 0,  {0, }}, /* 3/8 sec of silence for spammy friends */
     {1, 0, 0,  {0, }},
     {1, 0, 0,  {0, }},
-    {1, 8,  0, {NOTE_g5, }},
-    {1, 8,  1, {NOTE_g5, }},
-    {1, 8, 1, {NOTE_a4, }},
-    {1, 8, 1, {NOTE_a4, }},
-    {1, 0, 0,  {0, }},
+    {1, 8,  1, {NOTE_g3, }},
 }, friend_request[8] = {
     {1, 9,  0, {NOTE_g5, }},
     {1, 9,  1, {NOTE_g5, }},
@@ -563,7 +552,7 @@ static void generate_melody(MELODY melody[], uint32_t seconds, uint32_t notes_pe
     free(samples);
 }
 
-static void generate_tone_call_ringtone() { generate_melody(normal_ring, 4, 4, &RingBuffer); }
+static void generate_tone_call_ringtone() { generate_melody(normal_ring, 3, 4, &RingBuffer); }
 
 static void generate_tone_friend_offline() { generate_melody(friend_offline, 1, 4, &ToneBuffer); }
 
