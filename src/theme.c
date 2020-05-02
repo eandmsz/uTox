@@ -431,7 +431,7 @@ void theme_load(const THEME loadtheme) {
 
           COLOR_MENU_TEXT         = COLOR_MAIN_TEXT; // Settings gear icon default state, Contact avatars color, Own name in contact list
           COLOR_MENU_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // "All contacts" text, "Online contacts" text, your own status message on contact list
-          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(FOSSA_DARK_ORANGE);; // Settings gear color when settings opened
+          COLOR_MENU_TEXT_ACTIVE  = COLOR_PROC(FOSSA_DARK_ORANGE); // Settings gear color when settings opened
 
           COLOR_LIST_TEXT         = COLOR_MAIN_TEXT; // Contact list names
           COLOR_LIST_TEXT_SUBTEXT = COLOR_MAIN_TEXT_SUBTEXT; // Contact list text below the names (status message)
@@ -477,12 +477,12 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_MAIN_TEXT; // Same as above but for hover and also for filetransfer decline button hover text
 
           COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
-          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
+          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(0x0000FF); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
-          COLOR_BTN_DISABLED_TRANSFER     = COLOR_PROC(0xDF00D8); // Incoming or ongoing filetransfer bg
-          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(0x0000FF); // Incoming or ongoing filetransfer text
+          COLOR_BTN_DISABLED_TRANSFER     = FOSSA_SPOTLIGHT_TEXT; // Incoming or ongoing filetransfer text
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle
 
-          COLOR_BTN_INPROGRESS_FORGRND = COLOR_BTN_SUCCESS_BKGRND; // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_FORGRND = FOSSA_STATUS_GREEN; // FileTransfer progress bar: transfer progress
           COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BTN_SUCCESS_TEXT; // FileTransfer progress bar bg
           COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
