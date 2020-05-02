@@ -962,7 +962,7 @@ msgid(THEME_DARK)
 msgstr("Dark theme")
 
 msgid(THEME_HIGHCONTRAST)
-msgstr("Calypso Dark")
+msgstr("Focal Fossa Dark")
 
 msgid(THEME_CUSTOM)
 msgstr("Custom (see docs)")
