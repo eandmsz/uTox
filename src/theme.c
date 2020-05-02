@@ -461,29 +461,29 @@ void theme_load(const THEME loadtheme) {
           COLOR_STATUS_AWAY   = COLOR_PROC(FOSSA_STATUS_YELLOW);
           COLOR_STATUS_BUSY   = COLOR_PROC(FOSSA_STATUS_RED);
 
-          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(0xDF00D8); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer finished/Send message buttons bg in normal state //FOSSA_DARK_ORANGE
+          COLOR_BTN_SUCCESS_BKGRND        = COLOR_PROC(FOSSA_DARK_ORANGE); // Toggle switch "ON" state bg, FileTransfer successfully finished bg, Settings buttons like: "Show password field" bg, Call/FileTransfer finished/Send message buttons bg in normal state
           COLOR_BTN_SUCCESS_TEXT          = COLOR_PROC(FOSSA_MID_GRAY); // Toggle switch "ON" state tick and rounded rectangle color, FileTransfer successfully finished text: "click to open" and filename, Settings buttons like: "Show password field" text, Call/FileTransfer/Send message button icons in normal state
           COLOR_BTN_SUCCESS_BKGRND_HOVER  = COLOR_PROC(FOSSA_DARK_ORANGE); // Same as above but for hover
           COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_BTN_SUCCESS_TEXT; // Same as above but for hover
 
-          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(0x00FFFF); // Call button bg during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
+          COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(FOSSA_STATUS_GREEN); // Call button bg during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
           COLOR_BTN_WARNING_TEXT          = COLOR_BKGRND_AUX; // Call button icon color during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
-          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(0xFF0000); // Same as above but for hover
+          COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(FOSSA_STATUS_GREEN); // Same as above but for hover
           COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_BKGRND_AUX; // Same as above but for hover
 
           COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(FOSSA_STATUS_RED); // Call button bg during an outgoing call and during esablished call and filetransfer decline button (BG or TEXT should be something redish to indicate the user is rejecting)
           COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call and filetransfer decline button (BG or TEXT should be something redish to indicate the user is rejecting)
-          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(0x0000FF); // Same as above but for hover and also for filetransfer decline button hover bg ???? normal state is? COLOR_BTN_SUCCESS_BKGRND ?
-          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_PROC(0xFFFF00); // Same as above but for hover and also for filetransfer decline button hover text (note that the normal state is not the COLOR_BTN_DANGER_TEXT but the COLOR_BTN_WARNING_TEXT ?)
+          COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(FOSSA_STATUS_RED); // Same as above but for hover and also for filetransfer decline button hover bg (note that the normal state for filetransfer decline button is COLOR_BTN_SUCCESS_BKGRND)
+          COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_MAIN_TEXT; // Same as above but for hover and also for filetransfer decline button hover text
 
           COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
           COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle, FileTransfer failed or cancelled text
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
-          COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST;
-          COLOR_BTN_DISABLED_FORGRND      = COLOR_BTN_DISABLED_TEXT;
+          COLOR_BTN_DISABLED_TRANSFER     = COLOR_BKGRND_LIST; // Incoming or ongoing filetransfer bg
+          COLOR_BTN_DISABLED_FORGRND      = COLOR_BTN_DISABLED_TEXT; // Incoming or ongoing filetransfer text
 
           COLOR_BTN_INPROGRESS_FORGRND = COLOR_BTN_SUCCESS_BKGRND; // FileTransfer progress bar: transfer progress
-          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BTN_SUCCESS_TEXT; // FileTransfer progress bar: bg
+          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BTN_SUCCESS_TEXT; // FileTransfer progress bar bg
           COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
