@@ -467,23 +467,23 @@ void theme_load(const THEME loadtheme) {
           COLOR_BTN_SUCCESS_TEXT_HOVER    = COLOR_BTN_SUCCESS_TEXT; // Same as above but for hover
 
           COLOR_BTN_WARNING_BKGRND        = COLOR_PROC(FOSSA_STATUS_GREEN); // Call button bg during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
-          COLOR_BTN_WARNING_TEXT          = COLOR_BKGRND_AUX; // Call button icon color during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
+          COLOR_BTN_WARNING_TEXT          = COLOR_PROC(0xFFFFFF); // Call button icon color during an incoming call (BG or TEXT should be something greenish to indicate the user is accepting)
           COLOR_BTN_WARNING_BKGRND_HOVER  = COLOR_PROC(FOSSA_STATUS_GREEN); // Same as above but for hover
           COLOR_BTN_WARNING_TEXT_HOVER    = COLOR_BKGRND_AUX; // Same as above but for hover
 
-          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(0xDF00D8); // Call button bg during an outgoing call and during esablished call and filetransfer decline button (BG or TEXT should be something redish to indicate the user is rejecting)
-          COLOR_BTN_DANGER_TEXT           = COLOR_MAIN_TEXT; // Call button icon color during outgoing call and during esablished call and filetransfer decline button text (BG or TEXT should be something redish to indicate the user is rejecting)
+          COLOR_BTN_DANGER_BACKGROUND     = COLOR_PROC(FOSSA_DARK_GRAY); // Call button bg during an outgoing call and during esablished call and filetransfer cancelled bg (BG or TEXT should be something redish to indicate the user is rejecting)
+          COLOR_BTN_DANGER_TEXT           = FOSSA_STATUS_RED; // Call button icon color during outgoing call and during esablished call and filetransfer cancelled text (BG or TEXT should be something redish to indicate the user is rejecting)
           COLOR_BTN_DANGER_BKGRND_HOVER   = COLOR_PROC(FOSSA_STATUS_RED); // Same as above but for hover and also for filetransfer decline button hover bg (note that the normal state for filetransfer decline button is COLOR_BTN_SUCCESS_BKGRND)
           COLOR_BTN_DANGER_TEXT_HOVER     = COLOR_MAIN_TEXT; // Same as above but for hover and also for filetransfer decline button hover text
 
-          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, Incoming FileTransfer bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
-          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Disabled Call/Message button icon, Incoming filetransfer text (Should be something grayish)
+          COLOR_BTN_DISABLED_BKGRND       = COLOR_PROC(FOSSA_DARK_GRAY); // Toggle switch "OFF" state bg, FileTransfer failed or cancelled bg, call/filesend/send message buttons when contact is offline, though you can still click on send message and it will be delivered when user comes online
+          COLOR_BTN_DISABLED_TEXT         = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Disabled Call/Message button icon, FileTransfer failed or cancelled text (Should be something grayish)
           COLOR_BTN_DISABLED_BKGRND_HOVER = COLOR_BTN_DISABLED_BKGRND; // Same as above but for hover
           COLOR_BTN_DISABLED_TRANSFER     = FOSSA_SPOTLIGHT_TEXT; // Incoming or ongoing filetransfer text
           COLOR_BTN_DISABLED_FORGRND      = COLOR_PROC(FOSSA_LIGHTEST_GRAY); // Toggle switch "OFF" state "X" and rounded rectangle
 
-          COLOR_BTN_INPROGRESS_FORGRND = FOSSA_STATUS_GREEN; // FileTransfer progress bar: transfer progress
-          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BTN_SUCCESS_TEXT; // FileTransfer progress bar bg
+          COLOR_BTN_INPROGRESS_FORGRND = FOSSA_SPOTLIGHT_TEXT; // FileTransfer progress bar: transfer progress
+          COLOR_BTN_INPROGRESS_BKGRND  = COLOR_BKGRND_ALT; // FileTransfer progress bar bg
           COLOR_BTN_INPROGRESS_TEXT    = COLOR_MAIN_TEXT; // FileTransfer progress bar text
             break;
         }
