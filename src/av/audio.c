@@ -446,7 +446,7 @@ static struct {
     {NOTE_b4,           493.88      },
     {NOTE_e4,           329.63      },
     {NOTE_f4,           349.23      },
-    {NOTE_g4,           392.000      },
+    {NOTE_g4,           392.00      },
     {NOTE_c5,           523.25      },
     {NOTE_d5,           587.33      },
     {NOTE_e5,           659.25      },
@@ -463,11 +463,11 @@ static struct melodies { /* C99 6.7.8/10 uninitialized arithmetic types are 0 th
     uint8_t fade;
     uint8_t notes[8];
 } normal_ring[16] = {
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d4,        }},
-    {1, 8, 1, {NOTE_d5,        }},
+    {1, 8, 1, {NOTE_e4,        }},
+    {1, 8, 1, {NOTE_e4,        }},
+    {1, 8, 1, {NOTE_g4,        }},
+    {1, 0, 0,  {0, }},
+    {1, 8, 1, {NOTE_g4,        }},
 	{1, 0, 0,  {0, }},
 	{1, 0, 0,  {0, }},
 	{1, 0, 0,  {0, }},
